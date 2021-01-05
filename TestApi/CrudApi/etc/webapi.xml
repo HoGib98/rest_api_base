@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/hello/savedata/" method="POST">
+            <service class="TestApi\CrudApi\Api\TestInterface" method="saveData"/>
+            <resources>
+                <resource ref="anonymous"/>
+            </resources>
+    </route>
+    <route url="/V1/hello/testgetall/" method="GET">
+            <service class="TestApi\CrudApi\Api\TestInterface" method="getAllData"/>
+            <resources>
+                <resource ref="anonymous"/>
+            </resources>
+    </route>
+    <route url="/V1/hello/deleteById/:id" method="DELETE">
+            <service class="TestApi\CrudApi\Api\TestInterface" method="deleteById"/>
+            <resources>
+                <resource ref="anonymous"/>
+            </resources>
+    </route>
+    <route url="/V1/hello/getById/:id" method="GET">
+            <service class="TestApi\CrudApi\Api\TestInterface" method="getById"/>
+            <resources>
+                <resource ref="anonymous"/>
+            </resources>
+    </route>
+    <route url="/V1/hello/testgetall/" method="POST">
+            <service class="TestApi\CrudApi\Api\TestInterface" method="updateById"/>
+            <resources>
+                <resource ref="anonymous"/>
+            </resources>
+    </route>
+</routes>
